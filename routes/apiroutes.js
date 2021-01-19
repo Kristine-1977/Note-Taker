@@ -30,7 +30,6 @@ module.exports = function (app) {
                 readToDb().then((notes) => res.json(JSON.parse(notes)))
             ))
     });
-
     app.delete("/api/notes/:id", function (req, res) {
         var id= req.params.id
         console.log(req.params.id)
